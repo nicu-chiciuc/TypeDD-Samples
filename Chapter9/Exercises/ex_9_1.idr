@@ -30,4 +30,4 @@ isLast (y :: []) value = case decEq y value of
                               (No contra) => No (lastNotSingleton contra)
 isLast (y :: (x :: xs)) value = case isLast (x :: xs) value of
                                      (Yes prf) => Yes (LastCons prf)
-                                     (No contra) => No (lastNotCons contra)
+                                     (No contra) => No (lastNotCons ?contra)
